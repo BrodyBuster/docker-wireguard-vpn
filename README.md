@@ -31,6 +31,17 @@ All of this is solved using some simple routes and metrics, that I put together 
 3. Create a wireguard conf file and save to /etc/wireguard/wg0.conf (see example)
 4. Edit wireguard.sh and change the variables to your liking. If you are using a dedicated IP from your vpn provider, assign it to the DEDICATED_IP varialble, otherwise leave it as is. 
 
+```
+## Set variables
+# Name of the docker network to route through wireguard
+# This network will be created if it does not exist using 10.30.0.0/16
+DOCKER_NET_NAME="docker-vpn0"
+# Name of wireguard interface to create
+DEV_NAME="wg0"
+# Dedicated IP assigned by your VPN provider. Leave as is, if you're not using a dedicated IP
+DEDICATED_IP=""
+```
+
 # Example /etc/wireguard/wg0.conf
 
 This script uses wg and not wg-quick to create the interface. wg uses a differently formated conf file than wg-quick.
