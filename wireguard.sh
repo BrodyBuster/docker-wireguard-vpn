@@ -5,7 +5,7 @@
 DOCKER_NET_NAME="docker-vpn0"
 # Name of wireguard interface to create
 DEV_NAME="wg0"
-# Dedicated Torguard IP. Leave empty if not using DEDICATED_IP="" 
+# Dedicated IP assigned by your VPN provider. Leave as is, if you're not using a dedicated IP
 DEDICATED_IP=""
 
 ##########################################################################################
