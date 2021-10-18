@@ -83,9 +83,7 @@ transmission:
       - [volume]      
       - [volume]
     ports:
-      - 9091:9091
-      - 51413:51413
-      - 51413:51413/udp
+      - 9091:9091 #GUI
     restart: unless-stopped
     logging:
       driver: "json-file"
