@@ -83,7 +83,9 @@ transmission:
       - [volume]      
       - [volume]
     ports:
-      - 9091:9091 #GUI
+      - 9091:9091 # GUI
+      - 51413:51413 # only needed if you have port forwarded on your vpn
+      - 51413:51413/udp # only needed if you have port forwarded on your vpn
     restart: unless-stopped
     logging:
       driver: "json-file"
